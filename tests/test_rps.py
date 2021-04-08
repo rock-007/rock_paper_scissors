@@ -86,5 +86,5 @@ class RockPaperScissorTest(unittest.TestCase):
     def test_player_2_wins_Rock_Spock(self):
         self.assertEqual("John wins", self.game_1.test_result("Rock", "Spock"))
     
-    # def test_invalid_gesture(self):
-    #     self.assertEqual("Please enter valid gestures", self.game_1.test_result("Rock", "Sock"))
+    def test_invalid_gesture(self):
+        self.assertEqual("Please enter valid gesture", self.game_1.test_result("Rock", "Sock"))

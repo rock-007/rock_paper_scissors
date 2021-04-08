@@ -15,15 +15,15 @@ class Rps:
         if player_1_input == player_2_input:
             return "tie"
 
-        for game in self.win_game:
-            if [player_1_input, player_2_input] == game:  
+        # first checks if player_1 = game[0], then checks if player_2 = game[0]
+        for game in self.win_game:   # example. wing_game[0] = ["Rock","Scissors"]
+            if [player_1_input, player_2_input] == game:  # list = ["Rock","Scissors"]
                 self.set_the_winner(self.player_1)
-                break
-            else:
-            # elif [player_2_input, player_1_input] == game:  
+                return f"{self.winner.name} wins"
+            elif [player_2_input, player_1_input] == game: # list = ["Rock","Scissors"]
                 self.set_the_winner(self.player_2)
-            #     break
-            # else:
-            #     return "Please enter valid gestures"
+                return f"{self.winner.name} wins"
+        
+        return "Please enter valid gesture"
 
-        return f"{self.winner.name} wins"
+        

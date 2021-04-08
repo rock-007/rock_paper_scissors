@@ -10,3 +10,10 @@ class RockPaperScissorTest(unittest.TestCase):
     
     def test_game_has_players(self):
         self.assertEqual(self.user_1, self.game_1.player_1)
+
+    def test_no_winner_at_start(self):
+        self.assertEqual(None, self.game_1.winner)
+
+    def test_winner_player_name(self):
+        self.game_1.set_the_winner(self.user_1)
+        self.assertEqual(self.user_1, self.game_1.winner)    

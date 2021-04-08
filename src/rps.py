@@ -2,7 +2,9 @@ class Rps:
     def __init__(self, player_1, player_2):
         self.player_1 = player_1
         self.player_2 = player_2
-        self.win_game = [["Rock","Scissor" ],["Paper","Rock"]]
+        self.win_game = [["Rock","Scissors"], ["Paper","Rock"], ["Scissors", "Paper"], 
+        ["Rock", "Lizard"], ["Lizard", "Spock"], ["Spock", "Scissors"], ["Scissors", "Lizard"], 
+        ["Lizard", "Paper"], ["Paper", "Spock"], ["Spock", "Rock"]]
         self.winner = None
 
     def set_the_winner(self, player):
@@ -21,11 +23,3 @@ class Rps:
                 self.set_the_winner(self.player_2)
 
         return f"{self.winner.name} wins"
-        
-
-    
-        
-        # if condition
-        # self.winner = player_1
-        # else:
-        # self.winner = player_2

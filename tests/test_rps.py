@@ -25,16 +25,27 @@ class RockPaperScissorTest(unittest.TestCase):
         self.assertEqual("tie", self.game_1.test_result("Rock", "Rock")) 
     
     def test_player_1_wins_with_rock(self):
-        self.assertEqual("Bob wins", self.game_1.test_result("Rock", "Scissor"))
+        self.assertEqual("Bob wins", self.game_1.test_result("Rock", "Scissors"))
     
     def test_player_1_wins_with_paper(self):
         self.assertEqual("Bob wins", self.game_1.test_result("Paper", "Rock"))
 
     def test_player_2_wins_with_rock(self):
-        self.assertEqual("John wins", self.game_1.test_result("Scissor", "Rock"))
+        self.assertEqual("John wins", self.game_1.test_result("Scissors", "Rock"))
     
     def test_player_2_wins_with_paper(self):
         self.assertEqual("John wins", self.game_1.test_result("Rock", "Paper"))
 
-    # def test_player_1_wins_with_rock(self):
-    #     self.assertEqual("tie", self.game_1.test_result("Rock", "Scissor"))    
+
+# EXTENSIONS:
+    def test_player_1_wins_scissors_paper(self):
+        self.assertEqual("Bob wins", self.game_1.test_result("Scissors", "Paper"))
+
+    def test_player_2_wins_scissors_paper(self):
+        self.assertEqual("John wins", self.game_1.test_result("Paper", "Scissors"))
+
+    def test_player_1_wins_rock_lizzard(self):
+        self.assertEqual("Bob wins", self.game_1.test_result("Rock", "Lizard"))
+
+    def test_player_2_wins_Lizard_Rock(self):
+        self.assertEqual("John wins", self.game_1.test_result("Lizard", "Rock"))

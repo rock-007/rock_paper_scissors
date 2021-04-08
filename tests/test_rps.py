@@ -30,5 +30,11 @@ class RockPaperScissorTest(unittest.TestCase):
     def test_player_1_wins_with_paper(self):
         self.assertEqual("Bob wins", self.game_1.test_result("Paper", "Rock"))
 
+    def test_player_2_wins_with_rock(self):
+        self.assertEqual("John wins", self.game_1.test_result("Scissor", "Rock"))
+    
+    def test_player_2_wins_with_paper(self):
+        self.assertEqual("John wins", self.game_1.test_result("Rock", "Paper"))
+
     # def test_player_1_wins_with_rock(self):
     #     self.assertEqual("tie", self.game_1.test_result("Rock", "Scissor"))    

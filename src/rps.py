@@ -7,4 +7,9 @@ class Rps:
 
     def set_the_winner(self, player):
         self.winner = player
+
+    def test_result(self, player_1_input, player_2_input):
+
+        if player_1_input == player_1_input:
+            return "tie"
         

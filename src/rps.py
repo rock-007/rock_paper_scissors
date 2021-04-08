@@ -16,10 +16,14 @@ class Rps:
             return "tie"
 
         for game in self.win_game:
-            if [player_1_input, player_2_input] == game:
+            if [player_1_input, player_2_input] == game:  
                 self.set_the_winner(self.player_1)
                 break
             else:
+            # elif [player_2_input, player_1_input] == game:  
                 self.set_the_winner(self.player_2)
+            #     break
+            # else:
+            #     return "Please enter valid gestures"
 
         return f"{self.winner.name} wins"
